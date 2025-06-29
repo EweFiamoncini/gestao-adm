@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const currentPage = window.location.pathname.split('/').pop();
 
-    if (currentPage === 'login.html') {
+    if (currentPage === 'index.html') {
         const formLogin = document.getElementById('formLogin');
         if (formLogin) {
             formLogin.addEventListener('submit', (event) => {
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (usuariosPermitidos[login] && usuariosPermitidos[login] === password) {
                     localStorage.setItem('loggedIn', 'true');
                     alert('Login bem-sucedido! Redirecionando para o Painel Administrativo.');
-                    window.location.href = 'index.html';
+                    window.location.href = 'home.html';
                 } else {
                     alert('Login ou senha incorretos. Tente novamente.');
                     loginInput.value = '';
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     // Autentucação dos painéis (Painel Administrativo, Cadastro, Listagem, Detalhes)
     else if (
-        currentPage === 'index.html' ||
+        currentPage === 'home.html' ||
         currentPage === 'formFuncionarios.html' ||
         currentPage === 'listar-funcionarios.html' ||
         currentPage === 'dados-funcionario.html'
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const isLoggedIn = localStorage.getItem('loggedIn');
         if (!isLoggedIn) {
             alert('Você precisa estar logado para acessar esta página.');
-            window.location.href = 'login.html';
+            window.location.href = 'index.html';
             return;
         }
 
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (confirm('Tem certeza que deseja sair?')) {
                     localStorage.removeItem('loggedIn');
                     alert('Você foi desconectado.');
-                    window.location.href = 'login.html';
+                    window.location.href = 'index.html';
                 }
             });
         }
