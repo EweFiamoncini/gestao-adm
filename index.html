@@ -57,7 +57,7 @@
       const formLogin = document.getElementById('formLogin');
       const loginInput = document.getElementById('login');
       const passwordInput = document.getElementById('password');
-      
+
       const loginError = document.createElement('span');
       loginError.className = 'error-message';
       loginInput.parentNode.insertBefore(loginError, loginInput.nextSibling);
@@ -65,7 +65,6 @@
       const passwordError = document.createElement('span');
       passwordError.className = 'error-message';
       passwordInput.parentNode.insertBefore(passwordError, passwordInput.nextSibling);
-
 
       formLogin.addEventListener('submit', (event) => {
         event.preventDefault(); // Impede o envio padrão do formulário
