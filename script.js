@@ -1,10 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Atualização do Ano no Rodapé (Para todas as páginas)
-    const spanAno = document.getElementById('anoAtual');
-    if (spanAno) {
-        const dataAtual = new Date();
-        spanAno.textContent = dataAtual.getFullYear();
-    }
     // Login
     const formLogin = document.getElementById('formLogin');
     const loginInput = document.getElementById('login');
@@ -30,6 +24,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Atualização do Ano no Rodapé (Para todas as páginas)
+    const spanAno = document.getElementById('anoAtual');
+    if (spanAno) {
+        const dataAtual = new Date();
+        spanAno.textContent = dataAtual.getFullYear();
+    }
+    
     // Formulário de Funcionários
     const form = document.getElementById('formCadastroFuncionario');
     const cpfInput = document.getElementById('cpf');
