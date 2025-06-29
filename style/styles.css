@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -38,9 +39,11 @@ tr:hover {
     padding: 15px;
     box-sizing: border-box;
   }
+
   table thead {
     display: none;
   }
+
   table tr {
     display: block;
     margin-bottom: 15px;
@@ -51,12 +54,14 @@ tr:hover {
     overflow: hidden;
     position: relative;
   }
+
   table td {
     display: none;
     border: none;
     padding: 5px 0;
     text-align: left;
   }
+
   table td[data-label="Nome Completo"] {
     display: block;
     font-weight: bold;
@@ -65,10 +70,12 @@ tr:hover {
     text-align: center;
     padding: 10px 0;
   }
+
   table td[data-label="Nome Completo"]::before {
     content: "";
     display: none;
   }
+
   table td[data-label=Ações] {
     display: flex;
     justify-content: center;
@@ -77,24 +84,29 @@ tr:hover {
     border-top: 1px solid #eee;
     margin-top: 5px;
   }
+
   .btn-editar,
   .btn-excluir {
     margin: 5px;
   }
+
   .container_btn {
     flex-direction: column;
     gap: 10px;
   }
+
   .container_btn a,
   .container_btn .btn-action {
     width: 100%;
     margin: 10px;
     box-sizing: border-box;
   }
+
   table {
     min-width: unset;
   }
 }
+
 form {
   width: 95%;
   padding: 20px;
@@ -117,6 +129,7 @@ form select[id=departamento],
 form input[id=dataContratacao] {
   width: 100%;
   padding: 10px;
+  margin-bottom: 15px;
   border: 1px solid #ced4da;
   border-radius: 5px;
   font-size: 1em;
@@ -232,12 +245,14 @@ form button:hover {
     flex-direction: column;
     align-items: stretch;
   }
+
   .search-container input[type=text],
   .search-container .btn-search {
     width: 100%;
     margin-bottom: 10px;
   }
 }
+
 .dados-container {
   background-color: #f8f9fa;
   border: 1px solid #dee2e6;
@@ -281,12 +296,14 @@ form button:hover {
   max-width: 400px;
   box-sizing: border-box;
 }
+
 #formLogin fieldset {
   border: 1px solid #ddd;
   border-radius: 5px;
   padding: 0 1.5rem;
   margin-bottom: 0 1.5rem;
 }
+
 #formLogin legend {
   font-size: 1.5rem;
   font-weight: 600;
@@ -295,30 +312,35 @@ form button:hover {
   margin-bottom: 1rem;
   text-align: center;
 }
+
 #formLogin .form-group {
   margin-bottom: 1.2rem;
 }
+
 #formLogin .form-group label {
   display: block;
   margin-bottom: 0.6rem;
   font-weight: 500;
   color: #2c3e50;
 }
+
 #formLogin .form-group input[type=text],
 #formLogin .form-group input[type=password] {
-  width: 100%;
+  width: calc(100% - 20px);
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 4px;
   font-size: 1rem;
   box-sizing: border-box;
 }
+
 #formLogin .form-group input[type=text]:focus,
 #formLogin .form-group input[type=password]:focus {
   border-color: #3498db;
   outline: none;
   box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
 }
+
 #formLogin button[type=submit] {
   background-color: #3498db;
   color: #fff;
@@ -331,6 +353,7 @@ form button:hover {
   width: 100%;
   transition: background-color 0.3s ease;
 }
+
 #formLogin button[type=submit]:hover {
   background-color: #2980b9;
 }
@@ -343,13 +366,16 @@ footer {
   color: #2c3e50;
   background-color: #e9ecef;
 }
+
 footer p {
   margin: 0.5rem 0;
 }
+
 footer a {
   color: #3498db;
   text-decoration: none;
 }
+
 footer a:hover {
   text-decoration: underline;
 }
@@ -360,14 +386,17 @@ footer a:hover {
     padding: 1.5rem;
     margin: 1rem;
   }
+
   legend {
     font-size: 1.2rem;
   }
+
   button[type=submit] {
     font-size: 1rem;
     padding: 10px 15px;
   }
 }
+
 /*Geral do site*/
 html,
 body {
@@ -480,4 +509,6 @@ footer a {
 footer a:hover {
   color: rgba(0, 123, 255, 0.9);
   font-weight: bold;
-}/*# sourceMappingURL=styles.css.map */
+}
+
+/*# sourceMappingURL=styles.css.map */
