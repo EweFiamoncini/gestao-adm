@@ -5,6 +5,30 @@ document.addEventListener('DOMContentLoaded', () => {
         const dataAtual = new Date();
         spanAno.textContent = dataAtual.getFullYear();
     }
+    // Login
+    const formLogin = document.getElementById('formLogin');
+    const loginInput = document.getElementById('login');
+    const passwordInput = document.getElementById('password');
+
+    formLogin.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const login = loginInput.value.trim();
+        const password = passwordInput.value.trim();
+
+        // Credenciais de exemplo
+        const userValido = 'admin';
+        const senhaValida = 'admin';
+
+        if (login === '' || password === '') {
+            alert('Por favor, preencha todos os campos.');
+        } else if (login === userValido && password === senhaValida) {
+            alert('Login bem-sucedido! Redirecionando para a página inicial.');
+            window.location.href = 'home.html';
+        } else {
+            alert('Login ou senha incorretos. Tente novamente.');
+        }
+    });
 
     // Formulário de Funcionários
     const form = document.getElementById('formCadastroFuncionario');
