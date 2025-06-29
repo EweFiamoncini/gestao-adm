@@ -44,7 +44,33 @@
           Fiamoncini</a>.</small></p>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const formLogin = document.getElementById('formLogin');
+      const loginInput = document.getElementById('login');
+      const passwordInput = document.getElementById('password');
+
+      formLogin.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const login = loginInput.value.trim();
+        const password = passwordInput.value.trim();
+
+        // Credenciais de exemplo
+        const userValido = 'usuario123';
+        const senhaValida = 'senha123';
+
+        if (login === '' || password === '') {
+          alert('Por favor, preencha todos os campos.');
+        } else if (login === userValido && password === senhaValida) {
+          alert('Login bem-sucedido! Redirecionando para a página inicial.');
+          window.location.href = 'home.html';
+        } else {
+          alert('Login ou senha incorretos. Tente novamente.');
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>
