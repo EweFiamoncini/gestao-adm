@@ -52,7 +52,7 @@ $font-poppins: 'Poppins', sans-serif;
 
     input[type="text"],
     input[type="password"] {
-      width: calc(100% - 20px);
+      width: 100%;
       padding: 10px;
       border: 1px solid $border-color;
       border-radius: 4px;
