@@ -117,7 +117,6 @@ form select[id=departamento],
 form input[id=dataContratacao] {
   width: 100%;
   padding: 10px;
-  margin-bottom: 15px;
   border: 1px solid #ced4da;
   border-radius: 5px;
   font-size: 1em;
@@ -307,7 +306,7 @@ form button:hover {
 }
 #formLogin .form-group input[type=text],
 #formLogin .form-group input[type=password] {
-  width: calc(100% - 20px);
+  width: 100%;
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 4px;
@@ -343,7 +342,6 @@ footer {
   font-size: 0.9rem;
   color: #2c3e50;
   background-color: #e9ecef;
-  border-top: 1px solid #ddd;
 }
 footer p {
   margin: 0.5rem 0;
