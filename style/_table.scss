@@ -1,0 +1,141 @@
+// Variáveis de Cores
+$branco: #ffffff;
+$cinza-claro-fundo: #f2f2f2;
+$cinza-muito-claro: #f9f9f9;
+$cinza-hover-linha: #f1f1f1;
+$cinza-borda-tabela: #ddd;
+$cinza-texto-cabecalho: #555;
+$sombra-cartao-mobile: rgba(0, 0, 0, 0.05);
+$cor-texto-nome-mobile: #2c3e50;
+$cinza-borda-separador: #eee;
+
+// Variáveis de Espaçamento e Tamanhos
+$margin-top-tabela: 5px;
+$padding-celula: 10px;
+$min-width-tabela-desktop: 700px;
+$margin-bottom-linha-mobile: 15px;
+$padding-mobile-funcionarios-lista: 15px;
+$padding-celula-mobile: 5px 0;
+$padding-nome-mobile: 10px 0;
+$margin-top-botoes-mobile: 5px;
+$margin-botoes-mobile: 5px;
+$gap-botoes-container-mobile: 10px;
+$margin-botoes-container-mobile: 10px;
+$border-radius-padrao: 8px;
+$border-radius-pequeno: 5px; 
+
+// Variáveis de Fontes
+$font-size-nome-mobile: 1.1em;
+
+// Breakpoints de Media Query
+$breakpoint-mobile: 1100px;
+
+
+// Tabelas
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: $margin-top-tabela;
+  min-width: $min-width-tabela-desktop;
+}
+
+th,
+td {
+  border: 1px solid $cinza-borda-tabela;
+  padding: $padding-celula;
+  text-align: left;
+  word-wrap: break-word;
+}
+
+th {
+  background-color: $cinza-claro-fundo;
+  color: $cinza-texto-cabecalho;
+  white-space: nowrap;
+}
+
+td {
+  vertical-align: middle;
+}
+
+tr:nth-child(even) {
+  background-color: $cinza-muito-claro;
+}
+
+tr:hover {
+  background-color: $cinza-hover-linha;
+}
+
+/* Media Queries para Responsividade da Tabela */
+@media screen and (max-width: $breakpoint-mobile) {
+
+  .funcionarios-lista {
+    padding: $padding-mobile-funcionarios-lista;
+    box-sizing: border-box;
+  }
+
+  table thead {
+    display: none;
+  }
+
+  table tr {
+    display: block;
+    margin-bottom: $margin-bottom-linha-mobile;
+    border: 1px solid $cinza-borda-tabela;
+    border-radius: $border-radius-padrao;
+    box-shadow: 0 2px 4px $sombra-cartao-mobile;
+    padding: $padding-celula;
+    overflow: hidden;
+    position: relative;
+  }
+
+  table td {
+    display: none;
+    border: none;
+    padding: $padding-celula-mobile;
+    text-align: left;
+  }
+
+  table td[data-label="Nome Completo"] {
+    display: block;
+    font-weight: bold;
+    font-size: $font-size-nome-mobile;
+    color: $cor-texto-nome-mobile;
+    text-align: center;
+    padding: $padding-nome-mobile;
+  }
+
+  table td[data-label="Nome Completo"]::before {
+    content: '';
+    display: none;
+  }
+
+  table td[data-label="Ações"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: $padding-celula;
+    border-top: 1px solid $cinza-borda-separador;
+    margin-top: $margin-top-botoes-mobile;
+  }
+
+  .btn-editar,
+  .btn-excluir {
+    margin: $margin-botoes-mobile;
+  }
+
+  .container_btn {
+    flex-direction: column;
+    gap: $gap-botoes-container-mobile;
+  }
+
+  .container_btn a,
+  .container_btn .btn-action {
+    width: 100%;
+    margin: $margin-botoes-container-mobile;
+    box-sizing: border-box;
+  }
+
+  table {
+    min-width: unset;
+  }
+}

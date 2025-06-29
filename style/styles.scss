@@ -1,0 +1,135 @@
+//Importando Estilos
+@import "table.scss";
+@import "form.scss";
+@import "listFunc";
+@import "detFunc";
+@import "login";
+
+//Variaveis
+$bgBody: #e9ecef;
+$bgHeader: rgb(0, 123, 255, 0.9);
+$bgMain: rgb(255, 255, 255, 0.9);
+$colorPrimary: #fff;
+$colorMain: #343a40;
+$colorShadow: rgba(0, 0, 0, 0.5);
+$colorSecundari: #0056b3;
+$empty: red;
+
+/*Geral do site*/
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: $bgBody;
+  color: $colorMain;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-image: url('../imgs/logo.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+//Cabeçalho
+header {
+  max-width: 95%;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 10px;
+  box-sizing: border-box;
+  background-color: $bgHeader;
+  color: $colorPrimary;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 8px 16px $colorShadow;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+  font-family: 'Poppins';
+  font-weight: 700;
+}
+
+//Main
+main {
+  flex-grow: 1;
+  background-color: $bgMain;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 95%;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px $colorShadow;
+  position: relative;
+}
+
+//Butons
+.container_btn {
+  margin: 5px 0;
+  text-align: center;
+}
+
+.container_btn a {
+  display: inline-block;
+  background-color: $bgHeader;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.container_btn a:hover {
+  background-color: $colorSecundari;
+}
+
+.container_btn a#close {
+  margin-top: 20px;
+  background-color: red;
+}
+
+.container_btn a#close:hover{
+  background-color: rgb(150, 0, 0);
+}
+
+.empty-message {
+  color: $empty;
+  font-weight: bold;
+}
+
+//Rodapé
+footer {
+  background-color: rgb(255, 255, 255, 0.9);
+  text-align: center;
+  color: $colorMain;
+  width: 100%;
+  font-size: 0.9em;
+  flex-shrink: 0;
+}
+
+footer a {
+  text-decoration: none;
+  color: $colorMain;
+}
+
+footer a:hover {
+  color: $bgHeader;
+  font-weight: bold;
+}

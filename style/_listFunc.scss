@@ -1,0 +1,125 @@
+// Variáveis de Cores
+$branco: #ffffff;
+$azul-principal: #007bff;
+$vermelho-erro: #e74c3c;
+$vermelho-excluir: #dc3545;
+$cinza-borda: #ced4da;
+$cinza-busca: #6c757d;
+$cinza-hover-busca: #5a6268;
+$sombra-padrao: rgba(0, 0, 0, 0.1);
+
+// Variáveis de Espaçamento e Tamanhos
+$margin-bottom-padrao: 10px;
+$padding-pequeno: 5px;
+$padding-medio: 10px;
+$border-radius-padrao: 8px;
+$border-radius-pequeno: 5px;
+$gap-padrao: 10px;
+$max-width-conteudo: 100%;
+
+// Variáveis de Fontes
+$font-size-base: 1em;
+
+// Variáveis de Transições
+$transicao-padrao: background-color 0.3s ease;
+
+
+// Lista de Funcionarios Cadastrados
+.funcionarios-lista {
+  background-color: $branco;
+  border-radius: $border-radius-padrao;
+  box-shadow: 0 4px 8px $sombra-padrao;
+  width: 100%;
+  max-width: $max-width-conteudo;
+  margin-bottom: $margin-bottom-padrao;
+  overflow-x: auto;
+}
+
+.empty-message {
+  color: $vermelho-erro;
+  font-weight: bold;
+  text-align: center;
+  padding: $padding-pequeno * 2;
+}
+
+.acoes {
+  white-space: nowrap;
+}
+
+.btn-editar {
+  background-color: $azul-principal;
+  color: $branco;
+  padding: $padding-pequeno;
+  border-radius: $border-radius-pequeno;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.btn-editar:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.btn-excluir {
+  background-color: $vermelho-excluir;
+  color: $branco;
+  padding: $padding-pequeno;
+  border-radius: $border-radius-pequeno;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.btn-excluir:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.search-container {
+  display: flex;
+  gap: $gap-padrao;
+  margin-bottom: $margin-bottom-padrao;
+  width: 100%;
+  max-width: $max-width-conteudo;
+  box-sizing: border-box;
+  padding: 0 $padding-pequeno;
+}
+
+.search-container input[type="text"] {
+  flex-grow: 1;
+  padding: $padding-pequeno;
+  border: 1px solid $cinza-borda;
+  border-radius: $border-radius-pequeno;
+  font-size: $font-size-base;
+  box-sizing: border-box;
+}
+
+.search-container .btn-search {
+  background-color: $cinza-busca;
+  color: $branco;
+  padding: $padding-pequeno $padding-medio;
+  border-radius: $border-radius-pequeno;
+  border: none;
+  cursor: pointer;
+  transition: $transicao-padrao;
+  white-space: nowrap;
+}
+
+.search-container .btn-search:hover {
+  background-color: $cinza-hover-busca;
+}
+
+/* Media Query para responsividade da barra de pesquisa */
+@media screen and (max-width: 768px) {
+  .search-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-container input[type="text"],
+  .search-container .btn-search {
+    width: 100%;
+    margin-bottom: $gap-padrao;
+  }
+}

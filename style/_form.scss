@@ -1,0 +1,77 @@
+// Variáveis de Cores
+$cor-fundo-form: #f8f9fa;
+$cor-borda-form: #dee2e6;
+$cor-texto-label: #495057;
+$cor-borda-input: #ced4da;
+$cor-botao-sucesso: #28a745;
+$cor-botao-sucesso-hover: #218838;
+$branco: #ffffff;
+
+// Variáveis de Espaçamento e Tamanhos
+$padding-form: 20px;
+$margin-bottom-label: 8px;
+$margin-bottom-input: 15px;
+$margin-top-botao: 20px;
+$padding-input: 10px;
+$padding-botao: 12px 25px;
+$border-radius-padrao: 8px;
+$border-radius-pequeno: 5px;
+$width-form: 95%;
+
+// Variáveis de Fontes
+$font-weight-label: 600;
+$font-size-base: 1em;
+$font-size-botao: 1.1em;
+$font-weight-botao: 600;
+
+// Variáveis de Transições
+$transicao-botao: background-color 0.5s ease;
+
+
+// Formularios
+form {
+  width: $width-form;
+  padding: $padding-form;
+  border: 1px solid $cor-borda-form;
+  border-radius: $border-radius-padrao;
+  background-color: $cor-fundo-form;
+}
+
+form label {
+  display: block;
+  margin-bottom: $margin-bottom-label;
+  font-weight: $font-weight-label;
+  color: $cor-texto-label;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="tel"],
+form select[id="departamento"],
+form input[id="dataContratacao"] {
+  width: 100%;
+  padding: $padding-input;
+  margin-bottom: $margin-bottom-input;
+  border: 1px solid $cor-borda-input;
+  border-radius: $border-radius-pequeno;
+  font-size: $font-size-base;
+  box-sizing: border-box;
+}
+
+form button {
+  background-color: $cor-botao-sucesso;
+  color: $branco;
+  padding: $padding-botao;
+  border: none;
+  border-radius: $border-radius-pequeno;
+  cursor: pointer;
+  font-size: $font-size-botao;
+  font-weight: $font-weight-botao;
+  transition: $transicao-botao;
+  margin-top: $margin-top-botao;
+  width: 100%;
+}
+
+form button:hover {
+  background-color: $cor-botao-sucesso-hover;
+}
