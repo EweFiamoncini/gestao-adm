@@ -28,6 +28,6 @@ Redirecionamento automático de usuários não autenticados para a página de lo
 #### Persistência de Dados: 
   Utilização de localStorage para armazenar e recuperar informações dos funcionários diretamente no navegador, simulando um banco de dados local.
 
-Este sistema é uma demonstração prática de como construir uma aplicação web funcional, com foco em usabilidade, interatividade e persistência de dados client-side.
+## Este sistema é uma demonstração prática de como construir uma aplicação web funcional, com foco em usabilidade, interatividade e persistência de dados client-side.
 
 
